@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Track home</title>
@@ -6,6 +6,7 @@
 	</head>
 	
 	<body>
+
 	<div id="nav">
 	<ul id="navbar">
     <li ><a href="#">Home</a></li>
@@ -18,7 +19,7 @@
 	
 	<div id="sidebar">
 	<button type="button" id="f1" onclick="content1()">Track</button>
-	<button type="button" id="f2" onclick="content2()">function2</button>
+	<button type="button" id="f2" onclick="content2()">Geofence</button>
 	<button type="button" id="f3" onclick="content3()">function3</button>
 	<button type="button" id="f4" onclick="content4()">function4</button>
 	<button type="button" id="f5" onclick="content5()">function5</button>

@@ -1,24 +1,36 @@
 body{
-margin: 0px;
+	margin: 0px;
+	min-width: 960px;
 }
 
 #nav{
-width: 100%;
-height: 50px;
-background-color: gray;
+	width: 100%;
+	height: 50px;
+	background-color: gray;
 }
 
-#navbar{
-display: inline;
+#nav ul{
+	width: 350px;
+	margin: auto;
+	padding-top: 20px;
 }
 
-li{
-display: inline;
+#nav li{
+	display: inline-block;
+	font-size: 1.2em;
 }
+
+#nav li a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
 
 #functions{
-width:900px;
-margin: auto;
+	width:900px;
+	margin: auto;
 }
 
 #bu1 {
@@ -126,6 +138,6 @@ float:left;
 float: left;
 width: 550px;
 height: 480px;
-background-color: gray;
+/*background-color: gray;*/
 margin-top: 80px;
 }
