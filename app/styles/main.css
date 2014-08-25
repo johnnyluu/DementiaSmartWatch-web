@@ -158,9 +158,9 @@ button.menu img {
 
 .navdrawer-container h4,
 .navdrawer-container ul li a {
-    height: 60px;
+    height: 50px;
     padding: 0 20px;
-    line-height: 60px;
+    line-height: 50px;
 }
 
 .navdrawer-container h4 {
@@ -224,6 +224,8 @@ main {
 @media all and (min-device-width: 1200px) {
     .app-bar {
         position: relative;
+        height: 50px;
+        background-color: black;
     }
 
     .app-bar-container {
@@ -232,15 +234,15 @@ main {
         max-width: 864px;
         padding: 0 16px;
         box-sizing: border-box;
-        background-color: #4285f4;
+        background-color: black;
     }
 
     .app-bar .logo {
         float: left;
         margin: 0;
         padding: 0;
-        line-height: 130px;
-        font-size: 46px;
+        line-height: 50px;
+        font-size: 30px;
     }
 
     .app-bar-actions {

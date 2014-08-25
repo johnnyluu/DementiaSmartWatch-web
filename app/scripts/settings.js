@@ -15,10 +15,10 @@ function getLocation(){
 }
 
 function showPosition(position){
-	cordx = position.coords.latitude;
-	cordy = position.coords.longitude;
-	console.log(cordx,cordy);
-	initialize();
+	// cordx = position.coords.latitude;
+	// cordy = position.coords.longitude;
+	var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+	map.setCenter(pos);
 }
 
 function initialize() {
@@ -60,7 +60,7 @@ function newFence(a){
       fillOpacity: 0.35,
       map: map,
       center: a.latLng,
-      radius: 100
+      radius: 50
     };
     // Add the circle for this city to the map.
     var newGeoFence = new google.maps.Circle(geofence);
