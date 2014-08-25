@@ -42,7 +42,7 @@ function newFence(a){
 	if(setFence===true){console.log(a);
 	var centerlat = a.latLng.B;
 	var centerlong = a.latLng.k;
-	$.post('http://localhost/save.php', {
+	$.post('save.php', {
 		centerlat: centerlat,
 		centerlong: centerlong
 	}, function(data) {
