@@ -1,4 +1,6 @@
-"use strict";
+'use strict';
+/*global $:false */
+/*global google:false */
 var map;
 var cordx = 0.00;
 var cordy = 0.00;
@@ -8,7 +10,7 @@ function getLocation(){
 	if(navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(showPosition);
 	} else{
-		x.innerHTML = "Geolocation is not supported by your browser"
+		$('#map-canvas').innerHTML = 'Geolocation is not supported by your browser';
 	}
 }
 
@@ -26,7 +28,7 @@ function initialize() {
 	  center: new google.maps.LatLng(cordx, cordy),
 	  zoom: 14
 	};
-	map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+	map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 	google.maps.event.addListener(map, 'click', newFence);
 }
 
@@ -37,7 +39,7 @@ $('#createNew').click(function(){
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function newFence(a){
-	if(setFence==true){console.log(a);
+	if(setFence===true){console.log(a);
 	var centerlat = a.latLng.B;
 	var centerlong = a.latLng.k;
 	$.post('http://localhost/save.php', {
@@ -63,6 +65,6 @@ function newFence(a){
     // Add the circle for this city to the map.
     var newGeoFence = new google.maps.Circle(geofence);
     newGeoFence.setMap(map);
-};
+}
 	
 }
