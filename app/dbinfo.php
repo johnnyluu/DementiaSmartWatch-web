@@ -1,5 +1,5 @@
 <?php
-$username="agile";
-$password="agile";
-$database="agile";
+	$username="agile";
+	$password="agile";
+	$database="agile";
 ?>

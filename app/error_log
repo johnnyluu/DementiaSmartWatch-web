@@ -1,0 +1,4 @@
+[07-Sep-2014 05:25:17 UTC] PHP Fatal error:  Call to a member function getMessage() on a non-object in /home/fireboy0526/public_html/agile/combined_code/app/Nalert.php on line 26
+[07-Sep-2014 05:26:31 UTC] PHP Fatal error:  Call to a member function getMessage() on a non-object in /home/fireboy0526/public_html/agile/combined_code/app/Nalert.php on line 26
+[07-Sep-2014 05:26:41 UTC] PHP Fatal error:  Call to a member function getMessage() on a non-object in /home/fireboy0526/public_html/agile/combined_code/app/Nalert.php on line 26
+[07-Sep-2014 05:27:38 UTC] PHP Fatal error:  Call to a member function getMessage() on a non-object in /home/fireboy0526/public_html/agile/combined_code/app/Nalert.php on line 26

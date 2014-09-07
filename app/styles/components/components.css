@@ -1988,9 +1988,9 @@ li > p {
 }
 
 .button--primary {
-  background: #4285f4;
+  background: slateblue;
   color: white;
-  border: 1px solid #1266f1;
+  border: 1px solid #4b39bb;
 }
 
 .button--secondary {
@@ -2691,14 +2691,11 @@ object {
 @media only screen and (min-width: 620px) {
   .guides-list {
     display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    justify-content: space-between;
     -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     padding-top: 52px;
   }
 }
@@ -2712,13 +2709,10 @@ object {
 @media only screen and (min-width: 620px) {
   .guides-list__item {
     display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
+    flex-direction: column;
     -webkit-flex-direction: column;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-flex-wrap: wrap;
   }
 }
@@ -2730,8 +2724,7 @@ object {
 }
 @media only screen and (min-width: 620px) {
   .guides-list__item .primary-content {
-    -ms-flex: 1;
-        flex: 1;
+    flex: 1;
     -webkit-flex: 1;
   }
 }

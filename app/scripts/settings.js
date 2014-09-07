@@ -1,6 +1,6 @@
 'use strict';
-/*global $:false */
 /*global google:false */
+/*global $:false */
 var map;
 var cordx = 0.00;
 var cordy = 0.00;
@@ -22,6 +22,7 @@ function showPosition(position){
 }
 
 function initialize() {
+	console.log('running');
 	getLocation();
 
 	var mapOptions = {
@@ -32,16 +33,18 @@ function initialize() {
 	google.maps.event.addListener(map, 'click', newFence);
 }
 
-$('#createNew').click(function(){
+function addFence(){
 	setFence = true;
-});
+	console.log('setFence On');
+}
 
+$('#CreateNew').click(addFence);
 google.maps.event.addDomListener(window, 'load', initialize);
 
 function newFence(a){
 	if(setFence===true){console.log(a);
-	var centerlat = a.latLng.B;
-	var centerlong = a.latLng.k;
+	var centerlat = a.latLng.k;
+	var centerlong = a.latLng.B;
 	$.post('save.php', {
 		centerlat: centerlat,
 		centerlong: centerlong
@@ -53,10 +56,10 @@ function newFence(a){
     
    
     var geofence = {
-      strokeColor: '#FF0000',
+      strokeColor: '#0000FF',
       strokeOpacity: 0.8,
       strokeWeight: 1,
-      fillColor: '#FF0000',
+      fillColor: '#0000FF',
       fillOpacity: 0.35,
       map: map,
       center: a.latLng,
