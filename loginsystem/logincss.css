@@ -1,0 +1,55 @@
+#login {
+width: 450px;
+height: 250px;
+background-color: slateblue;
+margin: auto;
+margin-top: 200px;
+box-shadow: 0 0 20px black;
+font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
+border-radius: 10px;
+}
+
+#logintext {
+list-style: none;
+color: white;
+font-size: 1.6em;
+position: relative;
+top: 45px;
+left: 10px;
+line-height: 2em;
+}
+
+#loginbox {
+list-style: none;
+position: relative;
+top: -80px;
+left: 155px;
+line-height: 3.1em;
+}
+
+#user{
+font-size: 1.2em;
+}
+
+#pass{
+font-size: 1.2em;
+}
+
+#subbut {
+width: 145px;
+height: 44px;
+position: relative;
+top: -63px;
+left: 151px;
+box-shadow: 2px 2px 5px black;
+background-color: rgb(50,50,50);
+border: none;
+font-size: 1.4em;
+color: white;
+}
+
+#subbut:hover{
+	background-color: white;
+	cursor:pointer;
+	color: slateblue;
+}
