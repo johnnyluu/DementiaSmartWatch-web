@@ -77,6 +77,7 @@ app.controller('appController', ['$scope', '$http',
         console.log(data);
         if (data == "S") {
           $scope.loggedIn = true;
+          showMarkers();
         } else {
           alert("Wrong details, try again.")
         }
@@ -107,9 +108,10 @@ app.controller('settingsCtrl', ['$scope',
 
 app.controller('homeCtrl', ['$scope',
   function($scope) {
-
-    // some map stuff here
-
+    initialize();
+    $scope.$watch('loggedIn', function(){
+      if ($scope.loggedIn) showMarkers();
+    });
   }
 ]);
 

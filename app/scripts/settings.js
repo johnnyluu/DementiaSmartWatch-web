@@ -39,7 +39,7 @@ function initialize() {
 
 	var mapOptions = {
 		center: new google.maps.LatLng(47.60894, -122.34014100000002),
-		zoom: 10,
+		zoom: 16,
 		mapTypeId: google.maps.MapTypeId.HYBRID,
 		disableDefaultUI: true
 	};
@@ -51,7 +51,7 @@ function initialize() {
 	// 	position: new google.maps.LatLng(47.60894, -122.34014100000002)
 	// });
 	
-	showMarkers();
+	// showMarkers();
 }
 
 var infoWindow = new google.maps.InfoWindow;
@@ -85,11 +85,12 @@ function showMarkers() {
 				// icon: icon.icon,
 				// shadow: icon.shadow
 			});
+			map.setCenter(point);
 
-			google.maps.event.addListener(marker, 'click', function() {
-				infoWindow.setContent(html);
-				infoWindow.open(map, marker);
-			});
+			// google.maps.event.addListener(marker, 'click', function() {
+			// 	infoWindow.setContent(html);
+			// 	infoWindow.open(map, marker);
+			// });
 
 
 		});

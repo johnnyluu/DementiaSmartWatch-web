@@ -49,8 +49,8 @@
     <nav class="navdrawer-container promote-layer">
       <h4>Navigation</h4>
       <ul ng-show="loggedIn">
-        <li><a href="#" onclick="initialize()"><img src="images/home.png" /> home</a></li>
-        <li><a href="#settings" onclick="initialize()"><img src="images/settings.png" /> settings</a></li>
+        <li><a href="#"><img src="images/home.png" /> home</a></li>
+        <li><a href="#settings"><img src="images/settings.png" /> settings</a></li>
         <li id="alerts" ng-show="loggedIn"><a ng-click="toggle()"><img src="images/alerts.png" /> Alerts: <span id="alertnumber">{{numberOfAlerts}}</span></a></li>
       </ul>
       <login ng-hide="loggedIn"></login>
