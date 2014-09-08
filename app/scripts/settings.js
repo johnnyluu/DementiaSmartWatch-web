@@ -31,6 +31,8 @@ function showPosition(position){
 	map.setCenter(pos);
 }
 
+//create a reset/clear function
+
 function initialize() {
 	console.log('initialize running');
 	getLocation();
@@ -46,6 +48,7 @@ function initialize() {
 	showMarkers();
 }
 function showMarkers(){
+	// initialize();
 	var infoWindow = new google.maps.InfoWindow;
 
       // Change this depending on the name of your PHP file

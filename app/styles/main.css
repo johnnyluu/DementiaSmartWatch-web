@@ -12,7 +12,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
-
+::-webkit-scrollbar { 
+    display: none; 
+}
 body {
     position: relative;
     font-family: 'Roboto Condensed', 'Helvetica', 'Arial', sans-serif;
@@ -78,6 +80,19 @@ div#login h2{
     margin-bottom: 20px;
     color: rgb(50,50,50);
 }
+#loginForm input{
+    padding: 10px 20px;
+}
+#loginForm input[type="submit"]{
+    color: white;
+    background:black;
+    border: 2px solid black;
+    font-weight: bold;
+}
+#loginForm input[type="submit"]:hover{
+    background: blue;
+    border-color: white;
+}
 .app-bar-actions {
     display: -webkit-flex;
     display: flex;
@@ -123,11 +138,13 @@ button.menu img {
 #alertlist{
     position: absolute;
     color: black;
+    width: 100%;
 }
 li#alerts{
     margin-left: 50%;
     cursor: pointer;
 }
+
 #alertnumber{
     display: inline;
     color: orange;
@@ -228,22 +245,27 @@ li#alerts{
 }
 #alertsView{
     position: absolute;
-    top: 15%;
+    top: 100px;
     left: 65%;
-    width: 40%;
+    width: 300px;
     height: 40%;
-    padding: 5px;
     border: 3px slateblue;
     background-color: white;
     z-index:1009;
-    overflow: auto;
+    overflow-x: hidden;
     border: 1px solid slateblue;
 }
 div.alertlist{
     width: 100%;
 }
+div.alert{
+    padding: 10px;
+}
 div.alert:hover{
     background: lightblue;
+}
+div.alert p{
+    padding-top: 10px;
 }
 main {
     margin: 0 auto;
