@@ -1,178 +1,86 @@
 <!doctype html>
 <html ng-app="DSW">
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
-        <title>DSW</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>DSW</title>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- iOS icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/touch/apple-touch-icon-57x57-precomposed.png">
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+    <!-- Generic Icon -->
+    <link rel="shortcut icon" href="images/touch/touch-icon-57x57.png">
+    <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+    <!-- Chrome Add to Homescreen -->
+    <link rel="shortcut icon" sizes="196x196" href="images/touch/touch-icon-196x196.png">
+    <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+    <!--
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    -->
+    <!-- build:css styles/components/main.min.css -->
+    <link rel="stylesheet" href="styles/h5bp.css">
+    <link rel="stylesheet" href="styles/components/components.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-controller = "appController">
+    <header class="app-bar promote-layer">
+      <div class="app-bar-container">
+        <button class="menu"><img src="images/hamburger.svg"></button>
+        <h1 class="logo">DEMENTIA SMART WATCH</h1>
+        <section class="app-bar-actions">
+          <!-- Put App Bar Buttons Here -->
+        </section>
+      </div>
+    </header>
+    <nav class="navdrawer-container promote-layer">
+      <h4>Navigation</h4>
+      <ul ng-show="loggedIn">
+        <li><a href="#" onclick="initialize()"><img src="images/home.png" /> home</a></li>
+        <li><a href="#settings" onclick="initialize()"><img src="images/settings.png" /> settings</a></li>
+        <li id="alerts" ng-show="loggedIn"><a ng-click="toggle()"><img src="images/alerts.png" /> Alerts: <span id="alertnumber">{{numberOfAlerts}}</span></a></li>
+      </ul>
+      <login ng-hide="loggedIn"></login>
+    </nav>
+    <ng-view ng-show="loggedIn"> </ng-view>
+    <div id="map-canvas"></div>
+    <div alerts id="alertsView" ng-show="expand === true"></div>
+    
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjejqS3SwZt7v9bFwwP1t1_ArOKhJfDTQ" type="text/javascript">
+    </script>
+    <script src="scripts/settings.js" type="text/javascript"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular-route.js"></script>
+    <script src="scripts/app.js"></script>
 
-        <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.0/angular-route.js"></script>
-
-        <script src="scripts/app.js"></script>
-
-        <!-- iOS icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="images/touch/apple-touch-icon-57x57-precomposed.png">
-
-        <!-- Tile icon for Win8 (144x144 + tile color) -->
-        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-        <meta name="msapplication-TileColor" content="#3372DF">
-
-        <!-- Generic Icon -->
-        <link rel="shortcut icon" href="images/touch/touch-icon-57x57.png">
-
-        <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-        <!--
-        <link rel="canonical" href="http://www.example.com/">
-        -->
-
-        <!-- Chrome Add to Homescreen -->
-        <link rel="shortcut icon" sizes="196x196" href="images/touch/touch-icon-196x196.png">
-
-        <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
-        <!--
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="">
-        -->
-
-        <!-- build:css styles/components/main.min.css -->
-        <link rel="stylesheet" href="styles/h5bp.css">
-        <link rel="stylesheet" href="styles/components/components.css">
-        <link rel="stylesheet" href="styles/main.css">
-
-        <!-- endbuild -->
-    </head>
-    <body ng-controller = "appController">
-        <header class="app-bar promote-layer">
-            <div class="app-bar-container">
-                <button class="menu"><img src="images/hamburger.svg"></button>
-                <h1 class="logo">DEMENTIA SMART WATCH</h1>
-                <section class="app-bar-actions">
-                <!-- Put App Bar Buttons Here -->
-                </section>
-            </div>
-        </header>
-
-        <nav class="navdrawer-container promote-layer">
-            <h4>Navigation</h4>
-            <ul ng-show="loggedIn">
-                <li><a href="#" onclick="initialize()"><img src="images/home.png" /> home</a></li>
-                <li><a href="#settings" onclick="initialize()"><img src="images/settings.png" /> settings</a></li>
-                <li id="alerts" ng-show="loggedIn"><a ng-click="toggle()"><img src="images/alerts.png" /> Alerts: <span id="alertnumber">{{numberOfAlerts}}</span></a></li>
-                <!-- <li><a href="styleguide/index.html">Style Guide</a></li> -->
-            </ul>
-            <login ng-hide="loggedIn"></login>
-
-        </nav>
-    <!--     <trackingPage></trackingPage> -->
-    <!-- <main>
-    <tracking ng-show="tab===1"></tracking>
-    <settings ng-show="tab===2"></settings>
-</main> -->
-
-<ng-view ng-show="loggedIn"> </ng-view>
-<div id="map-canvas"></div>
-
-<div alerts id="alertsView" ng-show="expand === true"></div>
-
-<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjejqS3SwZt7v9bFwwP1t1_ArOKhJfDTQ" type="text/javascript">
-</script>
-<script src="scripts/settings.js" type="text/javascript"></script>
-
-        <!-- build:js scripts/main.min.js -->
-        <script src="scripts/main.js"></script>
-<!--        <script type="text/javascript">
-    //<![CDATA[
-
-    var customIcons = {
-      restaurant: {
-        icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png',
-        shadow: 'http://labs.google.com/ridefinder/images/mm_20_shadow.png'
-      },
-      bar: {
-        icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png',
-        shadow: 'http://labs.google.com/ridefinder/images/mm_20_shadow.png'
-      }
-    };
-
-    function load() {
-      console.log('running load()');
-      var map = new google.maps.Map(document.getElementById("map"), {
-        center: new google.maps.LatLng(47.6145, -122.3418),
-        zoom: 13,
-        mapTypeId: 'roadmap'
-      });
-      var infoWindow = new google.maps.InfoWindow;
-
-      // Change this depending on the name of your PHP file
-      downloadUrl("location_fetch.php", function(data) {
-        var xml = data.responseXML;
-        var markers = xml.documentElement.getElementsByTagName("marker");
-        for (var i = 0; i < markers.length; i++) {
-          var name = markers[i].getAttribute("name");
-          var address = markers[i].getAttribute("address");
-          var type = markers[i].getAttribute("type");
-          var point = new google.maps.LatLng(
-              parseFloat(markers[i].getAttribute("lat")),
-              parseFloat(markers[i].getAttribute("lng")));
-          var html = "<b>" + name + "</b> <br/>" + address;
-          var icon = customIcons[type] || {};
-          var marker = new google.maps.Marker({
-            map: map,
-            position: point,
-            icon: icon.icon,
-            shadow: icon.shadow
-          });
-          bindInfoWindow(marker, map, infoWindow, html);
-        }
-      });
-    }
-
-    function bindInfoWindow(marker, map, infoWindow, html) {
-      google.maps.event.addListener(marker, 'click', function() {
-        infoWindow.setContent(html);
-        infoWindow.open(map, marker);
-      });
-    }
-
-    function downloadUrl(url, callback) {
-      var request = window.ActiveXObject ?
-          new ActiveXObject('Microsoft.XMLHTTP') :
-          new XMLHttpRequest;
-
-      request.onreadystatechange = function() {
-        if (request.readyState == 4) {
-          request.onreadystatechange = doNothing;
-          callback(request, request.status);
-        }
-      };
-
-      request.open('GET', url, true);
-      request.send(null);
-    }
-
-    function doNothing() {}
-
-    //]]>
-  </script> -->
-        <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-        <!-- Built with love using Web Starter Kit -->
-    </body>
+    <!-- build:js scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+    <!-- Built with love using Web Starter Kit -->
+  </body>
 </html>

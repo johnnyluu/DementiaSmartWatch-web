@@ -1,7 +1,7 @@
 'use strict';
 /*global angular:false */
 var app = angular.module('DSW', ['ngRoute']);
-app.controller('appController', ['$scope','$http',
+app.controller('appController', ['$scope', '$http',
   function($scope, $http) {
 
     //alert control
@@ -10,7 +10,7 @@ app.controller('appController', ['$scope','$http',
     $scope.alerts = [];
 
     //login control
-    $scope.loggedIn = true;
+    $scope.loggedIn = false;
     $scope.user = '';
     $scope.pass = '';
 
@@ -30,88 +30,72 @@ app.controller('appController', ['$scope','$http',
           var alertsTemp = [];
           // console.log('before:' + data.records);
           $scope.numberOfAlerts = data.records.length;
-          for (var i=0; i<data.records.length; i++){
+          for (var i = 0; i < data.records.length; i++) {
             var msg = '';
-            var id= '';
-            var date= '';
-            if (data.records[i][5]==='1'){
+            var id = '';
+            var date = '';
+            if (data.records[i][5] === '1') {
               data.records[i][5] = 'Patient is out of boundaries';
-            }else if(data.records[i][5]==='2'){
+            } else if (data.records[i][5] === '2') {
               data.records[i][5] = "patient's watch's battery low";
-            }else if(data.records[i][5]==='3'){
+            } else if (data.records[i][5] === '3') {
               data.records[i][5] = "Patient pressed the panic button";
-            }else if(data.records[i][5]==='4'){
+            } else if (data.records[i][5] === '4') {
               data.records[i][5] = "Patient turned the watch on";
-            }else if(data.records[i][5]==='5'){
+            } else if (data.records[i][5] === '5') {
               data.records[i][5] = "Patient turned the watch off";
             };
-            msg =data.records[i][5];
+            msg = data.records[i][5];
             id = data.records[i][0];
             date = data.records[i][4];
-            alertsTemp[i] = [id,msg,date]
+            alertsTemp[i] = [id, msg, date]
           };
           $scope.alerts = alertsTemp;
 
           // change error-read to true after clicking on errors
-          
+
           // console.log('after:' + $scope.alerts);
         });
 
     };
 
-    $scope.login = function(){
-      var username = $scope.user;
-      var password = $scope.pass;
-      console.log(username + " " + password);
-      // var request = $http({
-      //     method: "post",
-      //     url: "logincheck.php",
-      //     data: {
-      //         username: username,
-      //         password: password,
-      //         status: "Best Friend"
-      //     }
-      // });
+    $scope.login = function() {
 
-      // // Store the data-dump of the FORM scope.
-      // request.success(
-      //     function( data ) {
-
-      //        if (data==='Success!'){
-      //       $scope.loggedIn = true;
-      //     }
-
-      //     }
-      // );
-      if (username == '1234' && password == "1234"){
-        $http.post('logincheck.php', {
-      username: username,
-      password: password
-      }).success(function(data){
-        if (data==='Success!'){
-            $scope.loggedIn = true;
-          }
+      var d = $.param({
+        username: $scope.user,
+        password: $scope.pass
       });
-      }
-      
+
+      $http({
+        method: 'POST',
+        url: 'logincheck.php',
+        data: d,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }).success(function(data) {
+        console.log(data);
+        if (data == "S") {
+          $scope.loggedIn = true;
+        } else {
+          alert("Wrong details, try again.")
+        }
+      });
+
+      // $scope.tab=2;
+
+      // $scope.reloadMap = function(){
+      //   console.log('blah');
+      //   application.tab = 2;
+      //   checkResize();
+      // };
+
+      $scope.getAlerts();
+
     }
-
-    // $scope.tab=2;
-
-    // $scope.reloadMap = function(){
-    //   console.log('blah');
-    //   application.tab = 2;
-    //   checkResize();
-    // };
-
-    $scope.getAlerts();
 
   }
 ]);
-
-// app.controller('alertController', ['$scope', '$http',
-
-// ]);
 
 app.controller('settingsCtrl', ['$scope',
   function($scope) {
