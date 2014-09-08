@@ -71,7 +71,13 @@ body {
     color: inherit;
     font-weight: normal;
 }
-
+div#login h2{
+    padding-bottom: 10px;
+}
+#loginForm{
+    margin-bottom: 20px;
+    color: rgb(50,50,50);
+}
 .app-bar-actions {
     display: -webkit-flex;
     display: flex;
@@ -221,17 +227,23 @@ li#alerts{
     background-color: rgba(255, 255, 255, 0.4);
 }
 #alertsView{
-
-        position: absolute;
-        top: 25%;
-        left: 25%;
-        width: 40%;
-        height: 40%;
-        padding: 5px;
-        border: 3px red;
-        background-color: white;
-        z-index:1002;
-        overflow: auto;
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    width: 40%;
+    height: 40%;
+    padding: 5px;
+    border: 3px slateblue;
+    background-color: white;
+    z-index:1009;
+    overflow: auto;
+    border: 1px solid slateblue;
+}
+div.alertlist{
+    width: 100%;
+}
+div.alert:hover{
+    background: lightblue;
 }
 main {
     margin: 0 auto;
@@ -241,7 +253,7 @@ main {
 }
 
 #map-canvas {
-    height: 500px;
+    height: 90%;
 }
 
 /** Larger Screens - desktops and tablets **/
@@ -255,7 +267,6 @@ main {
         display: block;
         height: 130px;
         max-width: 864px;
-        padding: 0 16px;
         box-sizing: border-box;
     }
 
@@ -291,11 +302,21 @@ main {
     div.heading{
         width: 100%;
         height: 80px;
+        position: absolute;
+        z-index: 1002;
+        background: rgba(255,255,255,.8);
     }
 
     #createNew{
         float: left;
         clear: right;
+    }
+
+    #createHint{
+        display: inline-block;
+        padding: 25px;
+        color: slateblue;
+        font-weight: bold;
     }
 
     #vf{

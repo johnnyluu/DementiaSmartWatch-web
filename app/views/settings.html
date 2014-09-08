@@ -1,6 +1,9 @@
-	<div class="heading">
-    <h2 id="vf">Virtual Fences</h2>
-    <a class="button--primary" id="createNew" onclick="addFence()">Create New</a>
-    </div>
-    <div id="map-canvas"></div>
+<div class="heading" ng-init="creating = false">
+	<div class="container">
+	<h2 id="vf">Virtual Fences</h2>
+	<a class="button--primary" id="createNew" onclick="addFence()" ng-click="creating = !creating">Create New</a>
+	<p id="createHint" style="display: none;"> Click on the map to create a new virtual fence</p>
+	</div>
+</div>
+
 
