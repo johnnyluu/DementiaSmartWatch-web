@@ -5,12 +5,12 @@ require_once 'org.openqa.selenium.server.SeleniumServer';
 class WebTest extends PHPUnit_Extensions_SeleniumTestCase
 {
 public static $browsers = array(
-      //array(
-      //  'browser' => '*firefox',
-      //),
-      //array(
-      //  'browser' => '*chrome',
-      //),
+      array(
+        'browser' => '*firefox',
+      ),
+      array(
+        'browser' => '*chrome',
+      ),
 	  array(
         'browser' => '*iexplore',
       )
