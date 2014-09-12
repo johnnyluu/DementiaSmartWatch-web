@@ -4,6 +4,7 @@
   "author": "Agile Ninjas",
   "license": "Apache",
   "devDependencies": {
+    "angular": "^1.2.23",
     "browser-sync": "^1.0.0",
     "gulp": "^3.8.7",
     "gulp-autoprefixer": "^0.0.7",
@@ -23,6 +24,9 @@
     "gulp-useref": "^0.4.3",
     "gulp-util": "^3.0.0",
     "jshint-stylish": "^0.2.0",
+    "karma": "^0.12.23",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5",
     "opn": "^0.1.1",
     "psi": "^0.0.4",
     "rimraf": "^2.2.8",

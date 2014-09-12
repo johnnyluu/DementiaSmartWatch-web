@@ -5,7 +5,7 @@
 	require("dbinfo.php");
 	$con = new PDO('mysql:host=localhost;dbname=agile',$username, $password);
 	$con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$sql = ("SELECT * FROM GPSRecord WHERE Error_Code != 0") or die(mysql_error());
+	$sql = ("SELECT * FROM GPSRecord WHERE Error_Code != 0 ORDER BY ID DESC") or die(mysql_error());
 	$stmt = $con->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL));
 	$stmt->execute();
 
