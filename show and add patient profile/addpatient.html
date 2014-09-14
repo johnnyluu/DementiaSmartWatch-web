@@ -1,0 +1,20 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script src="app.js"></script>
+
+<form method='post' ng-controller="profileController" ng-submit="addPost()">
+<label for="pn">Patient Name: </label>
+<input type="text" name="pn" id="pn" ng-mode = "pn" required title="2 characters minimum"><br/>
+<label for="di">Device ID: </label>
+<input type="text" name="di" id="di" ng-mode = "di" required title="2 characters minimum"><br/>
+<label for="cp">Contact person: </label>
+<input type="text" name="cp" id="cp" ng-mode = "cp" required title="2 characters minimum"><br/>
+<label for="cn">Contact number: </label>
+<input type="text" name="cn" id="cn" ng-mode = "cn" required title="2 characters minimum"><br/>
+<label for="dob">Date of Birth: </label>
+<input type="text" name="dob" id="dob" ng-mode = "dob" required title="2 characters minimum"><br/>
+<label for="gen">Gender: </label>
+<input type="text" name="gen" id="gen" ng-mode = "gen" required title="2 characters minimum"><br/>
+<label for="me">Medicine: </label>
+<input type="text" name="me" id="me" ng-mode = "me" required title="2 characters minimum"><br/>
+<button type="submit">Post</button>
+</form>

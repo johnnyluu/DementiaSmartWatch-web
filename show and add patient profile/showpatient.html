@@ -1,0 +1,43 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script src="app.js"></script>
+
+
+<body ng-app="DSW" ng-controller="profileController">
+<div ng-repeat="patient in patients">
+<table border="1" style="text-align: center; margin-left: 410px;">
+            <tr>
+                <td>Patient name: 
+                </td>
+                <td>Device id: 
+                </td>
+                <td>Contact person: 
+                </td>
+                <td>Contact number: 
+                </td>
+                <td>Date of birth: 
+                </td>
+                <td>Gender: 
+                </td>
+                <td>Medicine: 
+                </td>
+            </tr>
+            <tr>
+                <td>{{patient.patientname}}
+                </td>
+                <td>{{patient.deviceid}}
+                </td>
+                <td>{{patient.contactperson}}
+                </td>
+                <td>{{patient.contactnumber}}
+                </td>
+                <td>{{patient.dateofbirth}}
+                </td>
+                <td>{{patient.gender}}
+                </td>
+                <td>{{patient.medicine}}
+                </td>
+            </tr>
+        </table>
+</div>
+
+<a href = addpatient.html><p>Add Patient</p></a>
