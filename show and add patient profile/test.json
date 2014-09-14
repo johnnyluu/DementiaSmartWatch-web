@@ -1,0 +1,5 @@
+{"people":[
+    {"device_id":"1", "relative_username":"Doe", "patient_name":"bob", "contact_person":"haha1", "contact_number":"2314",  "date_of_birth":"444", "gender":"male", "medicine":"44"}, 
+    {"device_id":"2", "relative_username":"Smith", "patient_name":"bob", "contact_person":"haha2", "contact_number":"453",  "date_of_birth":"555", "gender":"female", "medicine":"33"},
+    {"device_id":"3", "relative_username":"Jones", "patient_name":"bob", "contact_person":"haha3", "contact_number":"4234",  "date_of_birth":"666", "gender":"male", "medicine":"77"}
+]}
