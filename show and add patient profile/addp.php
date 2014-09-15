@@ -4,7 +4,7 @@ session_start();
 	$dbhost = 'localhost';
 	$dbuser = 'creativ4_5022163';
 	$dbpass = 'xyz512612';
-	$db = 'creativ4_agile';
+	$db = 'creativ4_agile'; 
 	
 	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 	mysql_select_db($db);

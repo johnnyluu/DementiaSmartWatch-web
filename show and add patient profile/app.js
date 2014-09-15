@@ -5,7 +5,7 @@ app.controller('profileController', function profileController ($scope, $http) {
 
 $scope.numberOfPatient = 0;
 $scope.expand = false;
-$scope.patients = [];
+$scope.patients = []; 
 
       $http.get('showpatient.php')
         .success(function(data) {

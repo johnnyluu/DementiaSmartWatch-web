@@ -2,9 +2,9 @@
 session_start();
 
 	$dbhost = 'localhost';
-	$dbuser = 'creativ4_5022163';
-	$dbpass = 'xyz512612';
-	$db = 'creativ4_agile';
+	$dbuser = '$username';
+	$dbpass = '$password';
+	$db = 'agile';
 	
 	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 	mysql_select_db($db, $conn);
