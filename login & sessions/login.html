@@ -1,0 +1,10 @@
+<div id='login' class="container">
+	<h2>Please log in</h2>
+	<form method="post" action="LoginPage.php">
+	<input type="text" name="user" id="user" required title="2 characters minimum" placeholder="username" ng-model='user' > 
+	<?php errorLabel($errors, $name); ?>
+	<input type="password" name="pass" id="pass" required title="2 characters minimum" placeholder="password" ng-model='pass'> 
+	<?php errorLabel($errors, $name); ?>
+	<input type="submit" value="Login" name="login" id="subbut">
+	</form>
+</div>
