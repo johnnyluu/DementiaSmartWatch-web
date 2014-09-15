@@ -65,6 +65,7 @@ app.controller('appController', ['$scope', '$http',
         username: $scope.user,
         password: $scope.pass
       });
+      console.log(d);
 
       $http({
         method: 'POST',
@@ -75,7 +76,7 @@ app.controller('appController', ['$scope', '$http',
         }
       }).success(function(data) {
         console.log(data);
-        if (data == "S") {
+        if (data == $scope.user) {
           $scope.loggedIn = true;
           showMarkers();
         } else {

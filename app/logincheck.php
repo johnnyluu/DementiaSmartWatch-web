@@ -15,7 +15,8 @@
 
 	$count = mysql_num_rows($result);
 	if ($count) {
-	    echo "S";
+	    // echo "S";
+	    echo $_SESSION[$username] = $username;
 	} else {
 		echo "F";
 	}

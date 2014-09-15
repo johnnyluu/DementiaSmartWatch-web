@@ -1,0 +1,25 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+
+
+<body ng-app="DSW" ng-controller="profileController">
+<form method='post' ng-submit="addPost()">
+<label for="pn">Patient Name: </label>
+<input type="text" name="pn" id="pn" ng-model = "pn" required title="2 characters minimum"><br/>
+<label for="di">Device ID: </label>
+<input type="text" name="di" id="di" ng-model = "di" required title="2 characters minimum"><br/>
+<label for="cp">Contact person: </label>
+<input type="text" name="cp" id="cp" ng-model = "cp" required title="2 characters minimum"><br/>
+<label for="cn">Contact number: </label>
+<input type="text" name="cn" id="cn" ng-model = "cn" required title="2 characters minimum"><br/>
+<label for="dob">Date of Birth: </label>
+<input type="text" name="dob" id="dob" ng-model = "dob" required title="2 characters minimum"><br/>
+<label for="gen">Gender: </label>
+<input type="radio" name="gen" id="gen" ng-model = "gen" value="male" />male
+<input type="radio" name="gen" ng-model = "gen" required value="female"/>female<br />
+<!-- <label for="me">Medicine: </label>
+<input type="text" name="me" id="me" ng-model = "me" required title="2 characters minimum"><br/> -->
+<button type="submit">Post</button>
+</form>
+</body>
