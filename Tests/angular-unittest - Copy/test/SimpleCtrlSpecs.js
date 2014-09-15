@@ -1,4 +1,4 @@
-describe("app module", function () {
+describe("aaa module", function () {
     beforeEach(module("app"));
 
     describe("SimpleCtrl", function () {
@@ -12,6 +12,7 @@ describe("app module", function () {
 
         it("should assign message to hello world", function () {
             controller("SimpleCtrl", {$scope: scope});
+
             expect(scope.message).toBe("Hello World");
         });
     });

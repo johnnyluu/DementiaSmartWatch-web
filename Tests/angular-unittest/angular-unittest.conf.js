@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Fri Sep 12 2014 18:51:07 GMT+1000 (E. Australia Standard Time)
+// Generated on Mon Sep 15 2014 14:49:53 GMT+1000 (E. Australia Standard Time)
 
 module.exports = function(config) {
   config.set({
@@ -15,13 +15,14 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/*.js'
-    ],
-	files: [
 	  'app/lib/angular.js',
-	  'test/lib/angular-mocks.js',
+	  'app/lib/angular-mocks.js',
+	  'app/lib/jquery.js',
+	  'app/js/mockedDashboardJSON.js',
+	  //'app/logincheck.php',
+	  //'app/Nalert.php',
 	  'app/js/app.js',
-	  'test/*.js'
+	  'test/*.js',
 ],
 
 
