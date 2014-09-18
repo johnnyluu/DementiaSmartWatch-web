@@ -1,0 +1,32 @@
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="app3.js"></script>
+
+
+<body ng-app="DSW" ng-controller="mapController">
+<form method='post' ng-submit="showmap()">
+<p>patient ID:</p>
+<input type="text" name="patientiddd" id="patientiddd" ng-model = "patientiddd"><br/>
+<button type="submit">display fences</button>
+</form>
+
+<div ng-repeat="fence in fences">
+<table border="1" style="text-align: center; margin-left: 410px;">
+            <tr>
+                <td>{{fence.idgeo}}
+                </td>
+                <td>{{fence.cenlat}}
+                </td>
+                <td>{{fence.cenlong}}
+                </td>
+                <td>{{fence.radi}}
+                </td>
+                <td>{{fence.patid}}
+                </td>
+            </tr>
+        </table>
+</div>
+<div id="googleMap" style="width:500px;height:380px;"></div>
+</body>
