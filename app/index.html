@@ -48,16 +48,22 @@
     </header>
     <nav class="navdrawer-container promote-layer">
       <h4>Navigation</h4>
-      <ul ng-show="loggedIn">
-        <li><a href="#"><img src="images/home.png" /> home</a></li>
-        <li><a href="#settings"><img src="images/settings.png" /> settings</a></li>
-        <li id="alerts" ng-show="loggedIn"><a ng-click="toggle()"><img src="images/alerts.png" /> Alerts: <span id="alertnumber">{{numberOfAlerts}}</span></a></li>
+      <div class="container">
+      <ul id="navLeft" ng-show="loggedIn">
+        <li><a href="#"><img src="images/home.png" /><span class="nav-legend"> home</span></a></li>
+        <li><a href="#settings"><img src="images/settings.png" /><span class="nav-legend"> settings</span></a></li>
+<!--       </ul>
+      <ul id="navRight" ng-show="loggedIn"> -->
+        <li id="alerts" ng-show="loggedIn"><a ng-click="toggle()"><img src="images/alerts.png" /><span class="nav-legend"> alerts: </span><span id="alertnumber">{{numberOfAlerts}}</span></a></li>
+        <li id="patients" ng-show="loggedIn"><a ng-click="pToggle()"><img src="images/patient.png" /><span class="nav-legend" ng-hide="patientCount != 0">no patient</span><span id="patientname"> {{selectedPatient.patientname}}</span></a></li>
       </ul>
+      </div>
       <login ng-hide="loggedIn"></login>
     </nav>
     <ng-view ng-show="loggedIn"> </ng-view>
     <div id="map-canvas"></div>
-    <div alerts id="alertsView" ng-show="expand === true"></div>
+    <div alerts id="alertsView" ng-show="alertsExpand === true"></div>
+    <div patients id="patientsView" ng-show="patientsExpand === true"></div>
     
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
     

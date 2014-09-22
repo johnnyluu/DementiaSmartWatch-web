@@ -6,19 +6,13 @@ app.controller('appController', ['$scope', '$http',
 
     //alert control
     $scope.numberOfAlerts = 0;
-    $scope.expand = false;
+    $scope.alertsExpand = false;
     $scope.alerts = [];
-
-    //login control
-    $scope.loggedIn = false;
-    $scope.user = '';
-    $scope.pass = '';
 
     $scope.toggle = function() {
 
-      console.log('toggled');
-
-      $scope.expand = !$scope.expand;
+      $scope.alertsExpand = !$scope.alertsExpand;
+      $scope.patientsExpand = false;
 
       $scope.getAlerts();
     };
@@ -58,6 +52,10 @@ app.controller('appController', ['$scope', '$http',
         });
 
     };
+    //login control
+    $scope.loggedIn = false;
+    $scope.user = '';
+    $scope.pass = '';
 
     $scope.login = function() {
 
@@ -93,9 +91,167 @@ app.controller('appController', ['$scope', '$http',
       // };
 
       $scope.getAlerts();
+      $scope.showPatients();
 
     }
 
+    //patient control
+    $scope.patientCount = 0;
+    $scope.alertsExpand = false;
+    $scope.patients = [];
+    $scope.selectedPatient = undefined;
+    $scope.patientsExpand = false;
+    $scope.addingPatient = false;
+    $scope.editingPatient = false;
+
+    $scope.pToggle = function() {
+
+      $scope.patientsExpand = !$scope.patientsExpand;
+      $scope.alertsExpand = false;
+
+      $scope.showPatients();
+    };
+
+    $scope.showPatients = function() {
+      $http.get('showpatient.php')
+        .success(function(data) {
+          var patientTemp = [];
+          // console.log('before:' + data.records);
+
+
+          $scope.patientCount = data.people.length;
+          for (var i = 0; i < data.people.length; i++) {
+            var a = '';
+            var b = '';
+            var c = '';
+            var d = '';
+            var e = '';
+            var f = '';
+            var g = '';
+            var h = '';
+
+            a = data.people[i]['device_id'];
+            b = data.people[i]['relative_username'];
+            c = data.people[i]['patient_name'];
+            d = data.people[i]['contact_person'];
+            e = data.people[i]['contact_number'];
+            f = data.people[i]['date_of_birth'];
+            g = data.people[i]['gender'];
+            h = data.people[i]['medicine'];
+
+            patientTemp[i] = {
+              deviceid: a,
+              relativeusername: b,
+              patientname: c,
+              contactperson: d,
+              contactnumber: e,
+              dateofbirth: f,
+              gender: g,
+              medicine: h
+            }
+          };
+
+          $scope.patients = patientTemp;
+          if (!$scope.selectedPatient) {
+            $scope.initialisePatient();
+          }
+          // console.log("patients:" + $scope.patients);
+          // console.log("first" + $scope.patients[0]);
+
+          // change error-read to true after clicking on errors
+
+          // console.log('after:' + $scope.alerts);
+        });
+    }
+
+
+    $scope.initialisePatient = function() {
+      $scope.selectedPatient = $scope.patients[0];
+      // console.log("selected" + $scope.selectedPatient);
+    }
+
+    function updateMarker(patient) {
+      var id = patient.deviceid;
+      var da = $.param({
+        patientid: id
+      });
+      console.log('da' + da);
+      $http({
+        method: 'POST',
+        url: 'update_location.php',
+        data: da,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }).success(function(data) {
+        console.log(data.location);
+        marker.setPosition(new google.maps.LatLng(data.location[0].lat, data.location[0].lng));
+        map.panTo(new google.maps.LatLng(data.location[0].lat, data.location[0].lng));
+      });
+
+    }
+
+    $scope.selectPatient = function(patient) {
+      $scope.selectedPatient = patient;
+      updateMarker($scope.selectedPatient);
+    }
+
+    $scope.selectPatientAndToggle = function(patient) {
+      $scope.selectedPatient = patient;
+      updateMarker($scope.selectedPatient);
+      $scope.pToggle();
+    }
+
+    $scope.editPatient = function(patient) {
+      $scope.pn = patient.patientname;
+      $scope.di = patient.deviceid;
+      $scope.cp = patient.contactperson;
+      $scope.cn = patient.contactnumber;
+      $scope.dob = new Date(patient.dateofbirth);
+      $scope.gen = patient.gender;
+      $scope.addingPatient = true;
+      $scope.editingPatient= true;
+    }
+
+    $scope.addPatient = function() {
+      $scope.pn = undefined;
+      $scope.di = undefined;
+      $scope.cp = undefined;
+      $scope.cn = undefined;
+      $scope.dob = undefined;
+      $scope.gen = undefined;
+      $scope.addingPatient = true;
+      $scope.editingPatient = false;
+    }
+
+    $scope.addPost = function() {
+      var da = $.param({
+        patientnadd: $scope.pn,
+        deviceiadd: $scope.di,
+        contactpadd: $scope.cp,
+        contactnadd: $scope.cn,
+        dateoadd: $scope.dob,
+        genadd: $scope.gen
+        // mediadd: $scope.me
+      });
+      console.log($scope.dob);
+      $http({
+        method: 'POST',
+        url: 'addp.php',
+        data: da,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }).success(function(data) {
+        console.log(data);
+        if (data == "S") {
+          $scope.addingPatient = false;
+        } else {
+          alert("fail");
+        }
+      });
+      $scope.showPatients();
+    }
   }
 ]);
 
@@ -110,7 +266,7 @@ app.controller('settingsCtrl', ['$scope',
 app.controller('homeCtrl', ['$scope',
   function($scope) {
     initialize();
-    $scope.$watch('loggedIn', function(){
+    $scope.$watch('loggedIn', function() {
       if ($scope.loggedIn) showMarkers();
     });
   }
@@ -152,6 +308,13 @@ app.directive('alerts', function() {
   return {
     restrict: 'A',
     templateUrl: 'views/alerts.html'
+  };
+});
+
+app.directive('patients', function() {
+  return {
+    restrict: 'A',
+    templateUrl: 'views/patients.html'
   };
 });
 

@@ -36,14 +36,14 @@ var map=new google.maps.Map(document.getElementById("googleMap")
 		  if (typeof cityCircle === 'undefined') {
 		  } else {
 		  
-
+		  	//work on this
 		  //for (var n = 0; n < $scope.nn; n++) {
 		  //var delcir = $scope.circles[n];
 		  //new google.maps.Circle(delcir).setMap(map);
 		  //}
 		  cityCircle.setMap(null);
 		  }
-		  
+		 
 		  $scope.numberOfFence = data.fences.length;
           for (var i = 0; i < data.fences.length; i++) {
             var aa = '';

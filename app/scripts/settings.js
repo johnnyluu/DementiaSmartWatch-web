@@ -50,11 +50,12 @@ function initialize() {
 	// 	map: map,
 	// 	position: new google.maps.LatLng(47.60894, -122.34014100000002)
 	// });
-	
+
 	// showMarkers();
 }
 
 var infoWindow = new google.maps.InfoWindow;
+var marker;
 
 function showMarkers() {
 	// initialize();
@@ -79,7 +80,7 @@ function showMarkers() {
 			console.log(point);
 			var html = "<b>" + name + "</b> <br/>" + address;
 			// var icon = customIcons[type] || {};
-			var marker = new google.maps.Marker({
+			marker = new google.maps.Marker({
 				map: map,
 				position: point,
 				// icon: icon.icon,
@@ -116,6 +117,8 @@ function showMarkers() {
 		// }
 	});
 }
+
+
 
 // function bindInfoWindow(marker, map, infoWindow, html) {
 // 	google.maps.event.addListener(marker, 'click', function() {

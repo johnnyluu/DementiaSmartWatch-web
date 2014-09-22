@@ -24,7 +24,7 @@ describe('appController', function() {
             });
 
         $httpBackend.when('POST', 'logincheck.php').respond("1234");
-        
+
         scope = $injector.get('$rootScope');
 
         var $controller = $injector.get('$controller');

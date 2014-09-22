@@ -135,16 +135,28 @@ button.menu img {
     height:24px;
     width: 24px;
 }
+/*ul#navLeft{
+    width: 50%;
+}
+ul#navRight{
+    width: 50%;
+    float: right;
+}
+ul#navRight li{
+    float: right;
+}*/
 #alertlist{
     position: absolute;
     color: black;
     width: 100%;
 }
 li#alerts{
-    margin-left: 50%;
+    margin-left: 40%;
     cursor: pointer;
 }
-
+li#patients{
+    cursor: pointer;
+}
 #alertnumber{
     display: inline;
     color: orange;
@@ -243,10 +255,25 @@ li#alerts{
 .navdrawer-container ul li a.active {
     background-color: rgba(255, 255, 255, 0.4);
 }
+p.listSmall{
+    font-size: .8em;
+    color: grey;
+}
+a.listButton{
+    cursor: pointer;
+    padding: 0 5px;
+    color: grey;
+    background: #EEEEEE;
+    border-radius: 5px;
+}
+a.listButton:hover{
+    background: slateblue;
+    color: white;
+}
 #alertsView{
     position: absolute;
     top: 100px;
-    left: 65%;
+    left: 55%;
     width: 300px;
     height: 40%;
     border: 3px slateblue;
@@ -255,17 +282,93 @@ li#alerts{
     overflow-x: hidden;
     border: 1px solid slateblue;
 }
-div.alertlist{
-    width: 100%;
-}
+
 div.alert{
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid grey;
+}
+div.alert:hover, div.patient:hover{
+    border-right: 5px solid slateblue;
+    background: #EEEEEE;
+}
+
+div.alert p{
+    padding: 0;
+}
+div#clearAlerts, div#addPatient{
+    cursor: pointer;
+    width: 100%;
+    background: #EEEEEE;
+    text-align: center;
+    border-bottom: 1px solid lightgrey;
+}
+div#clearAlerts a, div#addPatient a{
+    color: grey;
+}
+div#clearAlerts:hover, div#addPatient:hover{
+    background: slateblue;
+}
+div#clearAlerts:hover>a, div#addPatient:hover>a{
+    color: white;
+}
+#patientsView{
+    position: absolute;
+    top: 100px;
+    left: 60%;
+    width: 300px;
+    height: 40%;
+    border: 3px slateblue;
+    background-color: white;
+    z-index:1009;
+    overflow-x: hidden;
+    border: 1px solid slateblue;
+}
+
+div.patient{
+    padding: 10px;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    /*border-left: 60px solid lightgrey;*/
+}
+
+div.patient p{
+    padding: 0;
+}
+
+div.patient span.gender{
+    color: grey;
+}
+div#addForm input{
     padding: 10px;
 }
-div.alert:hover{
-    background: lightblue;
+div#addForm input[type="text"], div#addForm input[type="number"]{
+    width: 100%;
 }
-div.alert p{
-    padding-top: 10px;
+div#addForm label{
+    padding: 10px;
+    width: 40%;
+}
+div#addForm input[type="radio"]{
+    width: 15%;
+}
+div#addForm button#addPatientB{
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    color: white;
+    background:black;
+    border: 2px solid black;
+    font-weight: bold;
+    width: 200px;
+}
+div#addForm button#addPatientB:hover{
+    background: blue;
+    border-color: white;
+}
+div#addForm a#cancelAdd{
+    cursor: pointer;
 }
 main {
     margin: 0 auto;
@@ -344,7 +447,7 @@ main {
     #vf{
         width: auto;
         float: left;
-        padding-right: 50px;
+        padding-right: 25px;
     }
 
 /*    #createNew:hover{
@@ -431,5 +534,15 @@ main {
         text-align: center;
     }
 
+    .nav-legend{
+        display: none;
+    }
+    div.heading{
+        height: 50px;
+    }
+    #createNew{
+        line-height: 20px;
+        margin: 2px;
+    }
 
 }

@@ -1,0 +1,29 @@
+<div id="addPatient" ng-click="addPatient()"  ng-hide="addingPatient">
+    <a>+ add patient</a>
+</div>
+<div id="addForm" ng-show="addingPatient">
+    <form method='post'>
+        <input type="text" name="pn" id="pn" ng-model = "pn" required title="2 characters minimum" placeholder="Patient Name*"><br/>
+        <input type="text" name="di" id="di" ng-model = "di" required placeholder="Device ID*"><br/>
+        <input type="text" name="cp" id="cp" ng-model = "cp" placeholder="Contact Person"><br/>
+        <input type="text" name="cn" id="cn" ng-model = "cn" ngMinlength="6" placeholder="Contact Number"><br/>
+        <label for="dob">Date of Birth: </label>
+        <input type="date" name="dob" id="dob" ng-model = "dob" placeholder="Date of Birth"><br/>
+        <label for="gen">Gender: </label>
+        <input type="radio" name="gen" id="gen" ng-model = "gen" value="m" />male
+        <input type="radio" name="gen" ng-model = "gen" value="f"/>female<br />
+        <!-- <label for="me">Medicine: </label>
+        <input type="text" name="me" id="me" ng-model = "me" required title="2 characters minimum"><br/> -->
+        <button ng-click="addPost()" id="addPatientB">post</button>
+        <a ng-click="addingPatient=false" id="cancelAdd">cancel</a>
+        <a ng-show="editingPatient">Delete</a>
+    </form>
+</div>
+<div ng-repeat="patient in patients" class="patient" ng-hide="addingPatient" ng-click="selectPatientAndToggle(patient)">
+<!-- <div class="patient_photo"></div> -->
+<p class="patient_name">{{patient.patientname}} <!-- <span class="gender">{{patient.gender}}</span> --></p>
+<p class="listSmall"><i>Device ID:{{patient.deviceid}}</i></p>
+<a class="listButton" ng-click="editPatient(patient);$event.stopPropagation();">edit</a>
+<a class="listButton" ng-click="selectPatient(patient); $event.stopPropagation();">select</a>
+</div>
+

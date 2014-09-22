@@ -2,7 +2,7 @@
 var app = angular.module('DSW', []);
 app.controller('profileController', function profileController ($scope, $http) {
 
-
+ 
 $scope.numberOfPatient = 0;
 $scope.expand = false;
 $scope.patients = []; 
@@ -37,10 +37,11 @@ $scope.patients = [];
           };
 		  
           $scope.patients = patientTemp;
+        };
 		
           // change error-read to true after clicking on errors
 
-          // console.log('after:' + $scope.alerts);
+    // console.log('after:' + $scope.alerts);
         });
 		
 
