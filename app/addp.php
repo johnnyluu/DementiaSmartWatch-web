@@ -31,7 +31,7 @@ session_start();
 		echo'S';
 		mysql_close($conn);
 	} else {
-		mysql_query("UPDATE patients SET  relative_username='$relativen', patient_name='$patientn', contact_person='$cotactn', contact_number='$contactn', date_of_birth='$dateob', gender='$gend', medicine='$medi' WHERE device_id='$devicei' ") or die(mysql_error());
+		mysql_query("UPDATE patients SET  relative_username='$relativen', patient_name='$patientn', contact_person='$contactp', contact_number='$contactn', date_of_birth='$dateob', gender='$gend', medicine='$medi' WHERE device_id='$devicei' ") or die(mysql_error());
 		echo 'S';
 		// UPDATE `patients` SET `device_id`='1444', `relative_username`='1245', `patient_name`='bbrrrr', `contact_person`='ddrrrrr', `contact_number`='5454541', `gender`='m', `medicine`='ssjkdzmxfna' WHERE `id`='15';
 		mysql_close($conn);

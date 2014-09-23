@@ -42,6 +42,7 @@ app.controller('appController', ['$scope', '$http',
             msg = data.records[i][5];
             id = data.records[i][0];
             date = data.records[i][4];
+            //add lat and lng
             alertsTemp[i] = [id, msg, date]
           };
           $scope.alerts = alertsTemp;
