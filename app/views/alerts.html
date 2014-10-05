@@ -4,7 +4,7 @@
 <div ng-repeat="alert in alerts" class="alert">
 <p>{{alert[1]}}</p>
 <p class="listSmall"><i>{{alert[2]}}</i></p>
-<a class="listButton">view map</a>
-<a class="listButton">clear</a>
+<a class="listButton" ng-click="showAlertPosition()" >view map</a>
+<a class="listButton" ng-click="clearAlert()" >clear</a>
 </div>
 <div ng-show="alerts.length == 0">You don't have any notification</div>

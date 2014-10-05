@@ -53,6 +53,33 @@ app.controller('appController', ['$scope', '$http',
         });
 
     };
+	
+	//********************************************************************************
+	//clear alert
+	$scope.clearAlert = function() {
+	var da = $.param({
+        //alertid: $scope.alertid
+      });
+    
+      $http({
+        method: 'POST',
+        url: 'clearAlert.php',
+        data: da,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }).success(function(data) {
+        console.log(data);
+        if (data == "S") {
+          alert("fail");
+        } else {
+          alert("fail");
+        }
+      });
+	};
+	//****************************************************************************************
+	
+	
     //login control
     $scope.loggedIn = false;
     $scope.user = '';
@@ -171,6 +198,7 @@ app.controller('appController', ['$scope', '$http',
       // console.log("selected" + $scope.selectedPatient);
     }
 
+	//current patient's marker
     function updateMarker(patient) {
       var id = patient.deviceid;
       var da = $.param({
@@ -192,17 +220,98 @@ app.controller('appController', ['$scope', '$http',
 
     }
 
+	
+	
+	//current patient's multi-fences
+	$scope.numberOfFence = 0;
+	$scope.expand = false;
+	$scope.fences = [];
+	function updatefences(patient) {		
+      var mapd = $.param({
+        pid: patient.id
+      });
+
+      $http({
+        method: 'POST',
+        url: 'getfence.php',
+        data: mapd,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }).success(function(data) {
+          var fenceTemp = [];
+          // console.log('before:' + data.records);
+	
+		  if (typeof cityCircle === 'undefined') {
+		  } else {
+		  
+
+		  //for (var n = 0; n < $scope.nn; n++) {
+		  //var delcir = $scope.circles[n];
+		  //new google.maps.Circle(delcir).setMap(map);
+		  //}
+		  cityCircle.setMap(null);
+		  }
+		  
+		  $scope.numberOfFence = data.fences.length;
+          for (var i = 0; i < data.fences.length; i++) {
+            var aa = '';
+            var bb = '';
+            var cc = '';
+			var dd = '';
+			var ee = '';
+
+           
+            aa = data.fences[i]['idgeofences'];
+            bb = data.fences[i]['centerlat'];
+            cc = data.fences[i]['centerlong'];
+			dd = data.fences[i]['radius'];
+			ee = data.fences[i]['patientid'];
+			
+			
+		    var cir = [];
+			cir[i] = {
+			strokeColor: "#c3fc49",
+			strokeOpacity: 0.8,
+			strokeWeight: 2,
+			fillColor: "#c3fc49",
+			fillOpacity: 0.35,
+			map: map,
+			center: new google.maps.LatLng(bb, cc),
+			radius: parseInt(dd)
+			};
+			cityCircle = new google.maps.Circle(cir[i])
+			
+			
+            fenceTemp[i] = {idgeo: aa, cenlat: bb, cenlong: cc, radi: dd, patid: ee}
+			
+			};
+			$scope.circles = cir;
+			//$scope.nn = cir.length;
+			$scope.fences = fenceTemp;		
+      });
+	 }
+	
+	
+	//update marker and fences
     $scope.selectPatient = function(patient) {
       $scope.selectedPatient = patient;
       updateMarker($scope.selectedPatient);
+	  updatefences($scope.selectedPatient);
     }
 
     $scope.selectPatientAndToggle = function(patient) {
       $scope.selectedPatient = patient;
       updateMarker($scope.selectedPatient);
+	  updatefences($scope.selectedPatient);
       $scope.pToggle();
     }
-
+	
+	
+	 
+	 
+	 
+	 
     $scope.editPatient = function(patient) {
       $scope.pn = patient.patientname;
       $scope.di = patient.deviceid;
