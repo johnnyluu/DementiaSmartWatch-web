@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="10bec99d-73fc-400b-982a-1551f4d0ac2b" name="Default" comment="" />
+    <ignored path="Tests.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Tests" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="MyTestCase.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyTestCase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="6" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FixtureTestCase.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FixtureTestCase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="35" selection-start="259" selection-end="259" vertical-scroll-proportion="0.29651162" vertical-offset="0" max-vertical-offset="1632">
+              <folding>
+                <element signature="e#6#49#0" expanded="true" />
+                <marker date="1410424943647" expanded="true" signature="709:738" placeholder="DROP TABLE I..." />
+                <marker date="1410424943647" expanded="true" signature="832:867" placeholder="CREATE TABLE..IF..." />
+                <marker date="1410424943647" expanded="true" signature="1310:1339" placeholder="DROP TABLE I..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCase.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://C:/xampp/php/pear/PHPUnit/Extensions/Database/TestCase.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="0" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="32181">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="alertTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/alertTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="1" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="2805">
+              <folding>
+                <marker date="1410423879759" expanded="true" signature="372:416" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="488:548" placeholder="INSERT INTO ..." />
+                <marker date="1410423879759" expanded="true" signature="579:623" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="771:800" placeholder="SELECT MAX(I..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="868:913" placeholder="DELETE FROM ..." />
+                <marker date="1410423879759" expanded="true" signature="944:988" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="1231:1275" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="1347:1407" placeholder="INSERT INTO ..." />
+                <marker date="1410423879759" expanded="true" signature="1438:1482" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="1630:1659" placeholder="SELECT MAX(I..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="1727:1772" placeholder="DELETE FROM ..." />
+                <marker date="1410423879759" expanded="true" signature="1803:1847" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="2090:2134" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="2206:2266" placeholder="INSERT INTO ..." />
+                <marker date="1410423879759" expanded="true" signature="2297:2341" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="2489:2518" placeholder="SELECT MAX(I..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="2586:2631" placeholder="DELETE FROM ..." />
+                <marker date="1410423879759" expanded="true" signature="2662:2706" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="2949:2993" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="3065:3125" placeholder="INSERT INTO ..." />
+                <marker date="1410423879759" expanded="true" signature="3156:3200" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="3348:3377" placeholder="SELECT MAX(I..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="3445:3490" placeholder="DELETE FROM ..." />
+                <marker date="1410423879759" expanded="true" signature="3521:3565" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="3808:3852" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="3924:3984" placeholder="INSERT INTO ..." />
+                <marker date="1410423879759" expanded="true" signature="4015:4059" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="4207:4236" placeholder="SELECT MAX(I..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="4304:4349" placeholder="DELETE FROM ..." />
+                <marker date="1410423879759" expanded="true" signature="4380:4424" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="4667:4711" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="4783:4843" placeholder="INSERT INTO ..." />
+                <marker date="1410423879759" expanded="true" signature="4874:4918" placeholder="SELECT * FRO..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="5066:5095" placeholder="SELECT MAX(I..GPSRecord..." />
+                <marker date="1410423879759" expanded="true" signature="5163:5208" placeholder="DELETE FROM ..." />
+                <marker date="1410423879759" expanded="true" signature="5239:5283" placeholder="SELECT * FRO..GPSRecord..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowsersTest.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/BrowsersTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="1" selection-start="7" selection-end="61" vertical-scroll-proportion="9.807693" vertical-offset="272" max-vertical-offset="646">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="C:/xampp/php/pear/PHPUnit/Extensions/Database/TestCase.php" />
+        <option value="$PROJECT_DIR$/alertTest.php" />
+        <option value="$PROJECT_DIR$/FixtureTestCase.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="php">
+    <include_path>
+      <path value="C:\xampp\php\pear" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="699" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>GeneralPHP</id>
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpIncludeInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.jetbrains.php.config.PhpExternalLibrariesNodePatcher$PatchedLibraryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pear" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="options.lastSelected" value="Configurable.PHP.PHPUnit" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RunManager" selected="PHP Script.alertTest.php">
+    <configuration default="false" name="MyTestCase.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/MyTestCase.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <RunnerSettings RunnerId="PhpScriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpScriptDebugRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="alertTest.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/alertTest.php">
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="WebTest" configuration_file="$PROJECT_DIR$/../tries/phpunit.phar" directory="$PROJECT_DIR$" file="$PROJECT_DIR$/BrowsersTest.php" use_alternative_configuration_file="true" />
+      <RunnerSettings RunnerId="PhpRunner" />
+      <ConfigurationWrapper RunnerId="PhpRunner" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner configuration_file="$PROJECT_DIR$/../../INN372/phpunit.phar" directory="C:/xampp/php/pear/PHPUnit" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.MyTestCase.php" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Script.alertTest.php" />
+      <item index="2" class="java.lang.String" itemvalue="PHPUnit.Tests" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.alertTest.php" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.Tests" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.MyTestCase.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="10bec99d-73fc-400b-982a-1551f4d0ac2b" name="Default" comment="" />
+      <created>1410420295435</created>
+      <updated>1410420295435</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1296" height="699" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32881355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/MyTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="6" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FixtureTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="17" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1581">
+          <folding>
+            <element signature="e#6#49#0" expanded="true" />
+            <marker date="1410424943647" expanded="true" signature="709:738" placeholder="DROP TABLE I..." />
+            <marker date="1410424943647" expanded="true" signature="832:867" placeholder="CREATE TABLE..IF..." />
+            <marker date="1410424943647" expanded="true" signature="1310:1339" placeholder="DROP TABLE I..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/php/pear/PHPUnit/Extensions/Database/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="0" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="32181">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alertTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="1" selection-start="137" selection-end="137" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="2805">
+          <folding>
+            <marker date="1410423879759" expanded="true" signature="372:416" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="488:548" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="579:623" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="771:800" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="868:913" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="944:988" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="1231:1275" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="1347:1407" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="1438:1482" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="1630:1659" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="1727:1772" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="1803:1847" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2090:2134" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2206:2266" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="2297:2341" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2489:2518" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2586:2631" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="2662:2706" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2949:2993" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3065:3125" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="3156:3200" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3348:3377" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3445:3490" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="3521:3565" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3808:3852" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3924:3984" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="4015:4059" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="4207:4236" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="4304:4349" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="4380:4424" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="4667:4711" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="4783:4843" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="4874:4918" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="5066:5095" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="5163:5208" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="5239:5283" placeholder="SELECT * FRO..GPSRecord..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BrowsersTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="1" selection-start="7" selection-end="61" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/xampp/php/pear/PHPUnit/Extensions/Database/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="0" selection-start="3395" selection-end="3395" vertical-scroll-proportion="0.0" vertical-offset="1539" max-vertical-offset="32181">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="6" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BrowsersTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="1" selection-start="7" selection-end="61" vertical-scroll-proportion="9.807693" vertical-offset="272" max-vertical-offset="646">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/alertTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="1" selection-start="139" selection-end="139" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="2805">
+          <folding>
+            <marker date="1410423879759" expanded="true" signature="372:416" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="488:548" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="579:623" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="771:800" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="868:913" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="944:988" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="1231:1275" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="1347:1407" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="1438:1482" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="1630:1659" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="1727:1772" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="1803:1847" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2090:2134" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2206:2266" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="2297:2341" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2489:2518" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2586:2631" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="2662:2706" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="2949:2993" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3065:3125" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="3156:3200" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3348:3377" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3445:3490" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="3521:3565" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3808:3852" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="3924:3984" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="4015:4059" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="4207:4236" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="4304:4349" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="4380:4424" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="4667:4711" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="4783:4843" placeholder="INSERT INTO ..." />
+            <marker date="1410423879759" expanded="true" signature="4874:4918" placeholder="SELECT * FRO..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="5066:5095" placeholder="SELECT MAX(I..GPSRecord..." />
+            <marker date="1410423879759" expanded="true" signature="5163:5208" placeholder="DELETE FROM ..." />
+            <marker date="1410423879759" expanded="true" signature="5239:5283" placeholder="SELECT * FRO..GPSRecord..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FixtureTestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="35" selection-start="259" selection-end="259" vertical-scroll-proportion="0.29651162" vertical-offset="0" max-vertical-offset="1632">
+          <folding>
+            <element signature="e#6#49#0" expanded="true" />
+            <marker date="1410424943647" expanded="true" signature="709:738" placeholder="DROP TABLE I..." />
+            <marker date="1410424943647" expanded="true" signature="832:867" placeholder="CREATE TABLE..IF..." />
+            <marker date="1410424943647" expanded="true" signature="1310:1339" placeholder="DROP TABLE I..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
