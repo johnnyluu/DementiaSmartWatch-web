@@ -19,7 +19,7 @@
         <input type="text" name="me" id="me" ng-model = "me" required title="2 characters minimum"><br/> -->
         <button ng-click="addPost()" id="addPatientB">post</button>
         <a ng-click="addingPatient=false" id="cancelAdd">cancel</a>
-        <a ng-show="editingPatient">Delete</a>
+        <a ng-show="editingPatient" ng-click = "delPatient(patient);">Delete</a>
     </form>
 </div>
 <div ng-repeat="patient in patients" class="patient" ng-hide="addingPatient" ng-click="selectPatientAndToggle(patient)">
