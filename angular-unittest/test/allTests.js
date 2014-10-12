@@ -24,6 +24,7 @@ describe('appController', function() {
             });
 
         $httpBackend.when('POST', 'logincheck.php').respond("1234");
+        $httpBackend.when('GET', 'showpatient.php').respond('{"people":[{"id":"2","device_id":"1234","relative_username":"1234","patient_name":"jonny","contact_person":"bobb","contact_number":"123456783","date_of_birth":"Thu Feb 04 1988 00:00:00 GMT+1000 (\u4e1c\u90e8\u6fb3\u5927\u5229\u4e9a\u6807\u51c6\u65f6\u95f4)","gender":"f","medicine":"panad","medicine_time":"Thu Jan 01 1970 16:40:00 GMT+1000 (E. Austral"}]}');
 
         scope = $injector.get('$rootScope');
 
@@ -42,13 +43,30 @@ describe('appController', function() {
         $httpBackend.verifyNoOutstandingRequest();
     });
 
-    it('should login', function() {
+    it('should login with the right username password combination', function() {
 
         $httpBackend.expectPOST('logincheck.php');
 
         var controller = createController();
         scope.user = "1234";
         scope.pass = "1234";
+
+        scope.login();
+
+        $httpBackend.flush();
+
+        expect(scope.loggedIn).toBe(true);
+
+    });
+
+
+    it('should login with the right username password combination', function() {
+
+        $httpBackend.expectPOST('logincheck.php');
+
+        var controller = createController();
+        scope.user = "1234";
+        scope.pass = "0000";
 
         scope.login();
 

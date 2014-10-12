@@ -27,6 +27,15 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
+var karma = require('karma').server;
+
+//Run test once and exit
+gulp.task('test', function(done){
+  karma.start({
+    configFile: __dirname + '/angular-unittest/angular-unittest.conf.js',
+    singleRun: true
+  }, done);
+});
 
 // Lint JavaScript
 gulp.task('jshint', function () {

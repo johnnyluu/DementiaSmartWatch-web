@@ -145,6 +145,11 @@ ul#navRight{
 ul#navRight li{
     float: right;
 }*/
+#noAlerts{
+    text-align: center;
+    height: 300px;
+    line-height: 300px;
+}
 #alertlist{
     position: absolute;
     color: black;

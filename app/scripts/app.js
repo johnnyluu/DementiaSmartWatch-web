@@ -56,14 +56,36 @@ app.controller('appController', ['$scope', '$http',
 	
 	//********************************************************************************
 	//clear alert
-	$scope.clearAlert = function() {
-	var da = $.param({
-        //alertid: $scope.alertid
+  $scope.clearAllAlerts = function(){
+    console.log('boom');
+    var da = $.param('s');
+    $http({
+        method: 'POST',
+        url: 'clearallalerts.php',
+        data: da,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      }).success(function(data) {
+        console.log('huh?');
+        if (data == "S") {
+          $scope.getAlerts();
+          console.log('success!');
+        } else {
+          console.log('blah FAIL');
+          // alert("fail");
+        }
       });
+  };
+	$scope.clearAlert = function(alert) {
+	var da = $.param({
+        alertid: alert[0]
+      });
+      console.log(da);
     
       $http({
         method: 'POST',
-        url: 'clearAlert.php',
+        url: 'clearalert.php',
         data: da,
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
@@ -71,9 +93,11 @@ app.controller('appController', ['$scope', '$http',
       }).success(function(data) {
         console.log(data);
         if (data == "S") {
-          alert("fail");
+          $scope.getAlerts();
+          console.log('success!');
         } else {
-          alert("fail");
+          console.log('blah FAIL');
+          // alert("fail");
         }
       });
 	};
@@ -226,11 +250,11 @@ app.controller('appController', ['$scope', '$http',
 	$scope.numberOfFence = 0;
 	$scope.expand = false;
 	$scope.fences = [];
-	function updatefences(patient) {		
+	$scope.updatefences = function(patient) {		
       var mapd = $.param({
         pid: patient.id
       });
-
+      // console('getting fence?');
       $http({
         method: 'POST',
         url: 'getfence.php',
@@ -291,13 +315,14 @@ app.controller('appController', ['$scope', '$http',
 			$scope.fences = fenceTemp;		
       });
 	 }
+
 	
 	
 	//update marker and fences
     $scope.selectPatient = function(patient) {
       $scope.selectedPatient = patient;
       updateMarker($scope.selectedPatient);
-	  updatefences($scope.selectedPatient);
+	    updatefences($scope.selectedPatient);
     }
 
     $scope.selectPatientAndToggle = function(patient) {

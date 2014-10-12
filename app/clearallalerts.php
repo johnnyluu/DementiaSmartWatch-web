@@ -12,9 +12,7 @@ session_start();
 	die('Not connected : ' . mysql_error());
 	}
 	
-	$alertid = $_POST['alertid'];
-	
-	$sql= "UPDATE GPSRecord set error_read = 't' WHERE id='$alertid'";
+	$sql= "UPDATE GPSRecord set error_read = 't' WHERE Error_Code != 0 && error_read = 'f'";
 	mysql_query ($sql) or die('Invalid query: ' . mysql_error());
 	echo 'S'
 ?>
