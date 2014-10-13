@@ -275,6 +275,30 @@ a.listButton:hover{
     background: slateblue;
     color: white;
 }
+
+#bu1{
+    cursor: pointer;
+    padding-left: 21px;
+    color: white;
+    background: white;
+    border-radius: 5px;
+}
+#bu2{
+    cursor: pointer;
+    padding-left: 0px;
+    color: white;
+    background: white;
+    border-radius: 5px;
+}
+#bu1:hover{
+    background: white;
+    color: white;
+}
+#bu2:hover{
+    background: white;
+    color: white;
+}
+
 #alertsView{
     position: absolute;
     top: 100px;
@@ -358,19 +382,27 @@ div#addForm label{
 div#addForm input[type="radio"]{
     width: 15%;
 }
+
+#backic{
+width:40px;
+}
+#delic{
+width:42px;
+}
+
 div#addForm button#addPatientB{
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 0px;
     padding: 10px;
     color: white;
     background:black;
     border: 2px solid black;
     font-weight: bold;
-    width: 200px;
+    width: 170px;
 }
 div#addForm button#addPatientB:hover{
     background: blue;
-    border-color: white;
+    border-color: blue;
 }
 div#addForm a#cancelAdd{
     cursor: pointer;

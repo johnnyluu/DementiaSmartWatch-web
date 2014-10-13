@@ -18,8 +18,8 @@
         <!-- <label for="me">Medicine: </label>
         <input type="text" name="me" id="me" ng-model = "me" required title="2 characters minimum"><br/> -->
         <button ng-click="addPost()" id="addPatientB">post</button>
-        <a class="listButton" ng-click="addingPatient=false" id="cancelAdd">cancel</a>
-        <a class="listButton" ng-show="editingPatient" ng-click = "delPatient();">Delete</a>
+        <a class="listButton" id = 'bu1' ng-click="addingPatient=false" id="cancelAdd"><img id='backic' src="images/back.png"/></a>
+        <a class="listButton" id = 'bu2' ng-show="editingPatient" ng-click = "delPatient();"><img id='delic' src="images/del.png"/></a>
     </form>
 </div>
 <div ng-repeat="patient in patients" class="patient" ng-hide="addingPatient" ng-click="selectPatientAndToggle(patient)">

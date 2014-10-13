@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Chrome 37.0.2062 (Windows 8.1)" package="unit" timestamp="2014-10-13T05:50:29" id="0" hostname="Jonny" tests="3" errors="0" failures="1" time="0.123">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36"/>
+    </properties>
+    <testcase name="should login with the right username password combination" time="0.09" classname="unit Chrome 37.0.2062 (Windows 8.1).appController"/>
+    <testcase name="should fetch the numberOfAlerts" time="0.014" classname="unit Chrome 37.0.2062 (Windows 8.1).appController"/>
+    <testcase name="should login" time="0.019" classname="unit Chrome 37.0.2062 (Windows 8.1).appController">
+      <failure type="">Error: Unexpected request: GET showpatient.php
+No more request expected
+    at $httpBackend (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular-mocks.js:1178:9)
+    at sendReq (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular.js:8291:9)
+    at $http.serverRequest (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular.js:8025:16)
+    at wrappedCallback (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular.js:11498:81)
+    at wrappedCallback (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular.js:11498:81)
+    at C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular.js:11584:26
+    at Scope.$eval (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular.js:12608:28)
+    at Scope.$digest (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular.js:12420:31)
+    at Function.$httpBackend.flush (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular-mocks.js:1438:16)
+    at null.&lt;anonymous&gt; (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/test/zzTest.js:55:22)
+</failure>
+      <failure type="">Error: Unflushed requests: 2
+    at Function.$httpBackend.verifyNoOutstandingRequest (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/app/lib/angular-mocks.js:1492:13)
+    at null.&lt;anonymous&gt; (C:/Users/Jonny/git/DementiaSmartWatch-web/angular-unittest/test/zzTest.js:42:22)
+</failure>
+    </testcase>
+    <system-out><![CDATA[Chrome 37.0.2062 (Windows 8.1) LOG: LOG
+ 'username=1234&password=1234',Chrome 37.0.2062 (Windows 8.1) LOG: LOG
+ '1234',Chrome 37.0.2062 (Windows 8.1) LOG: LOG
+ 'username=1234&password=1234'
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>
