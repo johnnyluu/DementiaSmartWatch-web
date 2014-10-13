@@ -2,9 +2,9 @@
 session_start();
 
 	$dbhost = 'localhost';
-	$dbuser = 'creativ4_5022163';
-	$dbpass = 'xyz512612';
-	$db = 'creativ4_agile';
+	$dbuser = 'agile';
+	$dbpass = 'agile';
+	$db = 'agile';
 	
 	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 	mysql_select_db($db);
@@ -12,9 +12,9 @@ session_start();
 	die('Not connected : ' . mysql_error());
 	}
 	
-	$patientid = $_POST['patientid'];
+	$deviceid = $_POST['deviceid'];
 	
-	$sql= "DELETE FROM patients WHERE patientid='$patientid'";
+	$sql= "DELETE FROM patients WHERE device_id='$deviceid'";
 	mysql_query ($sql) or die('Invalid query: ' . mysql_error());
 	echo 'S'
 ?>

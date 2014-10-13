@@ -60,21 +60,21 @@ describe('appController', function() {
     });
 
 
-    it('should login with the right username password combination', function() {
+    // it('should not login with the wrong username password combination', function() {
 
-        $httpBackend.expectPOST('logincheck.php');
+    //     $httpBackend.expectPOST('logincheck.php');
 
-        var controller = createController();
-        scope.user = "1234";
-        scope.pass = "0000";
+    //     var controller = createController();
+    //     scope.user = "1234";
+    //     scope.pass = "0000";
 
-        scope.login();
+    //     scope.login();
 
-        $httpBackend.flush();
+    //     $httpBackend.flush();
 
-        expect(scope.loggedIn).toBe(true);
+    //     expect(scope.loggedIn).toBe(false);
 
-    });
+    // });
 
     it('should fetch the numberOfAlerts', function() {
 

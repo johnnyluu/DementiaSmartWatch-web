@@ -10,16 +10,16 @@
         <label for="dob">Date of Birth: </label>
         <input type="date" name="dob" id="dob" ng-model = "dob" placeholder="Date of Birth"><br/>
         <label for="med">Medicine Reminder: </label>
-        <input type="text" name="medname" placeholder="Medicine name"><br/>
-        <input type="time" name="medtime" placeholder="Reminder time"><br/>
+        <input type="text" ng-model="mn" name="medname" placeholder="Medicine name"><br/>
+        <input type="time" ng-model="mt" name="medtime" placeholder="Reminder time"><br/>
         <label for="gen">Gender: </label>
         <input type="radio" name="gen" id="gen" ng-model = "gen" value="m" />male
         <input type="radio" name="gen" ng-model = "gen" value="f"/>female<br />
         <!-- <label for="me">Medicine: </label>
         <input type="text" name="me" id="me" ng-model = "me" required title="2 characters minimum"><br/> -->
         <button ng-click="addPost()" id="addPatientB">post</button>
-        <a ng-click="addingPatient=false" id="cancelAdd">cancel</a>
-        <a ng-show="editingPatient" ng-click = "delPatient(patient);">Delete</a>
+        <a class="listButton" ng-click="addingPatient=false" id="cancelAdd">cancel</a>
+        <a class="listButton" ng-show="editingPatient" ng-click = "delPatient();">Delete</a>
     </form>
 </div>
 <div ng-repeat="patient in patients" class="patient" ng-hide="addingPatient" ng-click="selectPatientAndToggle(patient)">

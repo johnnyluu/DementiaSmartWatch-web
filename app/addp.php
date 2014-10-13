@@ -18,7 +18,8 @@ session_start();
 	$contactn = $_POST['contactnadd'];
 	$dateob = $_POST['dateoadd'];
 	$gend = $_POST['genadd'];
-	$medi = '';
+	$medi = $_POST['mnadd'];
+	$medit = $_POST['mtadd'];
 	$relativen = $_SESSION['username'];
 
 	
@@ -27,11 +28,11 @@ session_start();
 	$count = mysql_num_rows($result);
 
 	if ($count < 1) {
-		mysql_query("INSERT INTO patients (device_id, relative_username, patient_name, contact_person, contact_number, date_of_birth, gender, medicine) VALUES ('$devicei', '$relativen', '$patientn', '$contactp', '$contactn', '$dateob', '$gend', '$medi')")  or die(mysql_error());
+		mysql_query("INSERT INTO patients (device_id, relative_username, patient_name, contact_person, contact_number, date_of_birth, gender, medicine, medicine_time) VALUES ('$devicei', '$relativen', '$patientn', '$contactp', '$contactn', '$dateob', '$gend', '$medi', '$medit')")  or die(mysql_error());
 		echo'S';
 		mysql_close($conn);
 	} else {
-		mysql_query("UPDATE patients SET  relative_username='$relativen', patient_name='$patientn', contact_person='$contactp', contact_number='$contactn', date_of_birth='$dateob', gender='$gend', medicine='$medi' WHERE device_id='$devicei' ") or die(mysql_error());
+		mysql_query("UPDATE patients SET  relative_username='$relativen', patient_name='$patientn', contact_person='$contactp', contact_number='$contactn', date_of_birth='$dateob', gender='$gend', medicine='$medi', medicine_time='$medit' WHERE device_id='$devicei' ") or die(mysql_error());
 		echo 'S';
 		// UPDATE `patients` SET `device_id`='1444', `relative_username`='1245', `patient_name`='bbrrrr', `contact_person`='ddrrrrr', `contact_number`='5454541', `gender`='m', `medicine`='ssjkdzmxfna' WHERE `id`='15';
 		mysql_close($conn);
