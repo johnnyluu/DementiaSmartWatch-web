@@ -1,20 +1,11 @@
-// 'use strict';
+'use strict';
 /*global google:false */
 /*global $:false */
 var map;
-var cordx = 0.00;
-var cordy = 0.00;
+// var cordx = 0.00;
+// var cordy = 0.00;
 var setFence = false;
-var customIcons = {
-	restaurant: {
-		icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png',
-		shadow: 'http://labs.google.com/ridefinder/images/mm_20_shadow.png'
-	},
-	bar: {
-		icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png',
-		shadow: 'http://labs.google.com/ridefinder/images/mm_20_shadow.png'
-	}
-};
+
 
 function getLocation() {
 	if (navigator.geolocation) {
@@ -124,29 +115,29 @@ function initialize() {
 	 //*****************************************************************************************
 }
 
-var infoWindow = new google.maps.InfoWindow;
+var infoWindow = new google.maps.InfoWindow();
 var marker;
 
 function showMarkers() {
 	// initialize();
 	// Change this depending on the name of your PHP file
-	$.get("location_fetch.php", function(data) {
+	$.get('location_fetch.php', function(data) {
 		// console.log(data);
 
 		var x = $(data);
-		var m = $(x).find("marker");
+		var m = $(x).find('marker');
 		m.each(function(i) {
 
 			// console.log(Number($(m[i]).attr("lat")), Number($(m[i]).attr("lng")));
 
-			var name = $(m[i]).attr("name");
-			var address = $(m[i]).attr("address");
-			var type = $(m[i]).attr("type");
+			var name = $(m[i]).attr('name');
+			var address = $(m[i]).attr('address');
+			var type = $(m[i]).attr('type');
 			var point = new google.maps.LatLng(
-				Number($(m[i]).attr("lat")),
-				Number($(m[i]).attr("lng")));
+				Number($(m[i]).attr('lat')),
+				Number($(m[i]).attr('lng')));
 			console.log(point);
-			var html = "<b>" + name + "</b> <br/>" + address;
+			var html = '<b>' + name + '</b> <br/>' + address;
 			// var icon = customIcons[type] || {};
 			marker = new google.maps.Marker({
 				map: map,
