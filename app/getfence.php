@@ -2,16 +2,16 @@
 session_start();
 
 	$dbhost = 'localhost';
-	$dbuser = 'creativ4_5022163';
-	$dbpass = 'xyz512612';
-	$db = 'creativ4_agile';
+	$dbuser = 'agile';
+	$dbpass = 'agile';
+	$db = 'agile';
 	
 	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
 	mysql_select_db($db, $conn);
 	$patientid = $_POST['pid'];
 
 
-$sql="SELECT * FROM geofences WHERE patientid='$patientid'";
+$sql="SELECT * FROM geofences WHERE device_id='$patientid'";
 $result = mysql_query ($sql);
 $rows = array();
 while($r = mysql_fetch_assoc($result)) {

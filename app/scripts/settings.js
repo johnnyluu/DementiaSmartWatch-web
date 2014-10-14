@@ -215,16 +215,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 function newFence(a) {
 	if (setFence === true) {
-		console.log(a);
 		var centerlat = a.latLng.k;
 		var centerlong = a.latLng.B;
+		var selectedP = "1234";
 		$.post('save.php', {
 			centerlat: centerlat,
-			centerlong: centerlong
+			centerlong: centerlong,
+			patientid: selectedP
 		}, function(data) {
 			console.log(data);
 		});
-		console.log(centerlat, centerlong);
+		console.log(centerlat, centerlong, selectedP);
 		setFence = false;
 
 

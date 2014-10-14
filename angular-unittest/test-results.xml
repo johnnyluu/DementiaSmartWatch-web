@@ -1,14 +1,18 @@
 <?xml version="1.0"?>
 <testsuites>
-  <testsuite name="Chrome 37.0.2062 (Windows 8.1)" package="unit" timestamp="2014-10-13T06:10:50" id="0" hostname="Jonny" tests="2" errors="0" failures="0" time="0.101">
+  <testsuite name="Chrome 37.0.2062 (Windows 8.1)" package="unit" timestamp="2014-10-14T06:00:31" id="0" hostname="Jonny" tests="4" errors="0" failures="0" time="0.112">
     <properties>
       <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.124 Safari/537.36"/>
     </properties>
-    <testcase name="should login with the right username password combination" time="0.088" classname="unit Chrome 37.0.2062 (Windows 8.1).appController"/>
-    <testcase name="should fetch the numberOfAlerts" time="0.013" classname="unit Chrome 37.0.2062 (Windows 8.1).appController"/>
+    <testcase name="should login with the right username password combination" time="0.085" classname="unit Chrome 37.0.2062 (Windows 8.1).appController"/>
+    <testcase name="should fetch the numberOfAlerts" time="0.014" classname="unit Chrome 37.0.2062 (Windows 8.1).appController"/>
+    <testcase name="Clicking on add new button should enter the adding virtual fence state" time="0.006" classname="unit Chrome 37.0.2062 (Windows 8.1).appController"/>
+    <testcase name="Clicking on clear should select the current alarm" time="0.007" classname="unit Chrome 37.0.2062 (Windows 8.1).appController"/>
     <system-out><![CDATA[Chrome 37.0.2062 (Windows 8.1) LOG: LOG
  'username=1234&password=1234',Chrome 37.0.2062 (Windows 8.1) LOG: LOG
- '1234'
+ '1234',Chrome 37.0.2062 (Windows 8.1) LOG: LOG
+ 'setFence On',Chrome 37.0.2062 (Windows 8.1) LOG: LOG
+ 'setFence On'
 ]]></system-out>
     <system-err/>
   </testsuite>

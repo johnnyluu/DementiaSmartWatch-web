@@ -24,6 +24,7 @@ describe('appController', function() {
             });
 
         $httpBackend.when('POST', 'logincheck.php').respond("1234");
+        $httpBackend.when('POST', 'save.php').respond("1234");
         $httpBackend.when('GET', 'showpatient.php').respond('{"people":[{"id":"2","device_id":"1234","relative_username":"1234","patient_name":"jonny","contact_person":"bobb","contact_number":"123456783","date_of_birth":"Thu Feb 04 1988 00:00:00 GMT+1000 (\u4e1c\u90e8\u6fb3\u5927\u5229\u4e9a\u6807\u51c6\u65f6\u95f4)","gender":"f","medicine":"panad","medicine_time":"Thu Jan 01 1970 16:40:00 GMT+1000 (E. Austral"}]}');
 
         scope = $injector.get('$rootScope');
@@ -89,6 +90,26 @@ describe('appController', function() {
         $httpBackend.flush();
 
         expect(scope.numberOfAlerts).toBe(1);
+
+    });
+
+    it('Clicking on add new button should enter the adding virtual fence state', function() {
+
+        var controller = createController();
+        addFence();
+        scope.creating = !scope.creating;
+
+        expect(scope.creating).toBe(true);
+
+    });
+
+    it('Clicking on clear should select the current alarm', function() {
+
+        var controller = createController();
+        addFence();
+        scope.creating = !scope.creating;
+
+        expect(scope.creating).toBe(true);
 
     });
 });
